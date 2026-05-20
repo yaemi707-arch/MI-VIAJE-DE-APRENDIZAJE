@@ -22,7 +22,6 @@
             line-height: 1.6;
         }
 
-        /* Encabezado Estético */
         header {
             background-color: var(--blanco);
             padding: 20px 5%;
@@ -47,11 +46,6 @@
             margin-left: 15px;
             font-weight: 700;
             font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--rosa-fuerte);
         }
 
         .container {
@@ -60,7 +54,6 @@
             padding: 20px;
         }
 
-        /* Tarjetas Estilo Pinterest */
         .card {
             background: var(--blanco);
             border-radius: 25px;
@@ -76,60 +69,33 @@
             font-size: 32px;
             margin-top: 0;
             border-bottom: 2px dashed var(--lila-tierno);
-            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        /* Sección Historia con vibras tiernas */
-        .profile-box {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .img-circle {
-            width: 120px;
-            height: 120px;
-            background: var(--lila-tierno);
-            border-radius: 50%;
-            border: 4px solid var(--rosa-pastel);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            text-align: center;
-            color: var(--rosa-fuerte);
-        }
-
-        /* Botones de descarga */
-        .grid-files {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .file-item {
-            background: var(--rosa-pastel);
-            padding: 15px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid var(--rosa-fuerte);
-        }
-
-        .btn-download {
-            display: inline-block;
-            background: var(--rosa-fuerte);
-            color: white;
-            padding: 8px 15px;
+        .img-hobby {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
             border-radius: 20px;
-            text-decoration: none;
-            font-size: 12px;
-            margin-top: 10px;
-            font-weight: bold;
+            margin-bottom: 12px;
+            border: 3px solid var(--lila-tierno);
         }
 
-        /* Frase final */
+        .grid-hobbies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .hobby-item {
+            text-align: center;
+            background: #fffafc;
+            padding: 18px;
+            border-radius: 22px;
+            border: 1px solid var(--rosa-pastel);
+            box-shadow: 0 4px 10px rgba(212, 132, 173, 0.05);
+        }
+
         .quote {
             background: var(--lila-tierno);
             padding: 20px;
@@ -147,6 +113,7 @@
         }
 
         ul { list-style-type: '🌸 '; }
+        li { margin-bottom: 10px; font-size: 15px; }
     </style>
 </head>
 <body>
@@ -155,7 +122,7 @@
         <div class="logo">Esmeralda 🎀</div>
         <nav>
             <a href="#historia">Sobre mí</a>
-            <a href="#proyectos">Proyectos</a>
+            <a href="#pasiones">Pasiones</a>
             <a href="#metas">Metas</a>
         </nav>
     </header>
@@ -164,46 +131,38 @@
         
         <div class="card" id="historia">
             <h2>Mi Historia ✨</h2>
-            <div class="profile-box">
-                <div class="img-circle">Tu foto <br> favorita aquí 📷</div>
-                <div>
-                    <p>¡Hola! Soy <strong>Esmeralda Garcia Tecpili</strong>, del grupo <strong>2AP</strong>.</p>
-                    <p>Soy una estudiante de programación que ama el color rosita y las vibras tiernas, pero que también tiene un lado genial: ¡me encanta <strong>Batman</strong> y mi personaje favorito es <strong>Jason Todd</strong>! 🦇</p>
-                    <p>Me apasiona leer cómics, devorar libros y siempre busco un toque creativo en todo lo que hago.</p>
-                </div>
-            </div>
+            <p>¡Hola! Soy <strong>Esmeralda Garcia Tecpili</strong>, del grupo <strong>2AP</strong>.</p>
+            <p>Soy una estudiante de programación que ama el color rosita y las vibras tiernas, pero que también tiene un lado genial: ¡me encanta <strong>Batman</strong> y mi personaje favorito es <strong>Jason Todd</strong>! 🦇</p>
         </div>
 
-        <div class="card">
-            <h2>Mis Logros y Retos 🏆</h2>
-            <p>He mejorado muchísimo en mi técnica de <strong>pintura</strong> 🎨 y me encanta experimentar en la <strong>cocina</strong> 🍳 creando cosas ricas.</p>
-            <p>Mi gran reto es mantener el equilibrio: disfrutar mis pasatiempos mientras soy responsable con mis materias de programación. </p>
-        </div>
-
-        <div class="card" id="proyectos">
-            <h2>Mis Proyectos y Gustos 🌸</h2>
-            <p>Aquí puedes ver el contraste de mi mundo: entre el rosa pastel y las historias de Red Hood. También te comparto mis tareas escolares:</p>
-            <div class="grid-files">
-                <div class="file-item">
-                    <strong>Código en C++</strong><br>
-                    <small>Tarea de Programación</small><br>
-                    <a href="#" class="btn-download">📥 Descargar .ZIP</a>
+        <div class="card" id="pasiones">
+            <h2>Mis Pasiones y Hobbies 🎨</h2>
+            <div class="grid-hobbies">
+                <div class="hobby-item">
+                    <img src="cocina.jpg" alt="Mi Cocina" class="img-hobby">
+                    <strong style="color: var(--rosa-fuerte); font-size: 16px;">En la Cocina 🍳</strong>
+                    <p style="font-size: 14px;">Me encanta experimentar nuevas recetas en la cocina y crear platillos ricos. ¡Cocinar me relaja muchísimo!</p>
                 </div>
-                <div class="file-item">
-                    <strong>Reporte Escolar</strong><br>
-                    <small>Documento PDF</small><br>
-                    <a href="#" class="btn-download">📥 Descargar .PDF</a>
+                <div class="hobby-item">
+                    <img src="libros.jpg" alt="Mis Libros" class="img-hobby">
+                    <strong style="color: var(--rosa-fuerte); font-size: 16px;">Mis Lecturas 📚</strong>
+                    <p style="font-size: 14px;">Devoro libros y cómics. Leer cosas personales e historias me ayuda a viajar a otros mundos y enriquecer mi dialecto.</p>
+                </div>
+                <div class="hobby-item">
+                    <img src="jason.jpg" alt="Jason Todd" class="img-hobby">
+                    <strong style="color: var(--rosa-fuerte); font-size: 16px;">Universo Batman 🦇</strong>
+                    <p style="font-size: 14px;">Aunque adore los tonos rositas y tiernos, Jason Todd es mi favorito de los cómics. ¡Amo ese contraste en mis vibras!</p>
                 </div>
             </div>
         </div>
 
         <div class="card" id="metas">
-            <h2>Mis Metas 🌙</h2>
+            <h2>Mis Metas y Aspiraciones 🌙</h2>
             <ul>
-                <li>Mejorar mis notas académicas para brillar en la escuela.</li>
-                <li>Enriquecer mi <strong>dialecto</strong> y vocabulario leyendo más.</li>
-                <li>Comprar mis cositas de maquillaje y detalles tiernos que tanto quiero. 💄</li>
-                <li>Terminar mi bachillerato con éxito.</li>
+                <li><strong>Aprender Matemáticas:</strong> Quiero mejorar y dominar los números para enriquecer mi aprendizaje lógico. 🔢</li>
+                <li><strong>Subir mis Notas Académicas:</strong> Mi gran meta es superarme en la escuela y tener un promedio excelente este semestre.</li>
+                <li><strong>Enriquecer mi Dialecto:</strong> Aprender vocabulario nuevo para expresarme de una manera mucho más bonita.</li>
+                <li><strong>Maquillaje y Detallitos:</strong> Trabajar y ahorrar para comprar mis cositas de maquillaje y todos los detalles tiernos que me encantan. 💄</li>
             </ul>
         </div>
 
@@ -217,7 +176,7 @@
     </div>
 
     <footer>
-        Hecho con amor y vibras de Batman por Esmeralda G. | 2026
+        Hecho con amor por Esmeralda G. | Grupo 2AP | 2026
     </footer>
 
 </body>
